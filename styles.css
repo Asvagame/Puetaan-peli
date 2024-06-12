@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Siirretään sivun yläreunaan */
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px; /* Marginaali ylhäältä */
+    position: relative; /* Salli absoluuttinen sijoittelu sisällä */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.game-board {
+    display: flex;
+    flex-wrap: wrap; /* Mahdollistaa useamman rivin */
+    justify-content: center; /* Keskittää kuvat vaakasuunnassa */
+    gap: 20px; /* Kuvien välinen tila */
+    position: relative; /* Salli absoluuttinen sijoittelu sisällä */
+    height: 300px; /* Riittävä korkeus kahdelle riville */
+}
+
+img {
+    width: 20%; /* Prosenttipohjainen leveys kuvien skaalaamiseksi */
+    max-width: 150px; /* Maksimileveys suuremmilla näytöillä */
+    height: auto; /* Säilyttää kuvasuhteen */
+    cursor: pointer;
+    position: absolute; /* Mahdollistaa vapaasti sijoittelun */
+}
+
+.stop-button {
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    cursor: pointer;
+}
+
+/* Responsiivisuus */
+@media (max-width: 600px) {
+    img {
+        width: 40%; /* Suurempi leveys pienillä näytöillä */
+        max-width: 75px; /* Maksimileveys pienillä näytöillä */
+    }
+
+    .stop-button {
+        width: 75px;
+        height: 75px;
+    }
+
+    .game-board {
+        height: 300px; /* Riittävä korkeus kahdelle riville */
+    }
+}
+
+/* Esimerkki kuvien vapaan sijoittelun */
+.kuva1 {
+    top: 0;
+    left: 10%;
+}
+
+.kuva2 {
+    top: 0;
+    left: 30%;
+}
+
+.kuva3 {
+    top: 0;
+    left: 50%;
+}
+
+.kuva4 {
+    top: 0;
+    left: 70%;
+}
+
+.kuva5 {
+    top: 150px;
+    left: 10%;
+}
+
+.kuva6 {
+    top: 150px;
+    left: 30%;
+}
+
+.kuva7 {
+    top: 150px;
+    left: 50%;
+}
+
+.kuva8 {
+    top: 150px;
+    left: 70%;
+}
